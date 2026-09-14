@@ -21,6 +21,15 @@ console.log('Number of prices:', allProductPrices.length);
 let productCards = document.getElementsByClassName('product-card');
 console.log('product cards:', productCards.length);
 
-// Element by tag
-let all_Elements = dovument.getElementsbytagname('h3');
-console.log('all_Element:',h3.length);
+// Element by tag name
+let allParagraphs = document.getElementsByTagName('p');
+console.log('All paragraphs:', allParagraphs.length);
+
+// Loop with forEach()
+let productCardsForEach = document.querySelectorAll('.product-card');
+productCardsForEach.forEach((product, index) => {
+    let name = product.querySelector('.product-name')?.textContent.trim();
+    let price = product.querySelector('.price')?.textContent.trim();
+    console.log(`Product ${index + 1}: ${name} - ${price}`);
+});
+
