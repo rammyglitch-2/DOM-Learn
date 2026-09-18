@@ -52,3 +52,9 @@ console.log('parent node:', container.parentNode);
 console.log('children:',container.children);
 console.log('firstelementchild:', container.firstElementChild);
 console.log('lastelementchild', container.lastElementChild);
+
+// EXplore siblings element
+console.log('child nodes:', container.childNodes);
+console.log('first product card:', container.querySelector('.product-card'));
+const nextElement = container.querySelector('.product-card').nextElementSibling;
+const prevElement = container.querySelector('.product-card').previousElementSibling;
