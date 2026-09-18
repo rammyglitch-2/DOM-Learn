@@ -1,7 +1,10 @@
-// Get Element by ID
-let titleElement = document.getElementById('store-title');
-console.log(titleElement); // Returns the h1 element
-console.log(titleElement.textContent); // TechZone Store
+if (typeof document === 'undefined') {
+    console.log('This file uses the browser DOM. Open index.html to run it.');
+} else {
+    // Get Element by ID
+    let titleElement = document.getElementById('page-title');
+    console.log(titleElement); // Returns the h1 element
+    console.log(titleElement.textContent); // TechZone Store
 
 // Query selector
 let productElement = document.querySelector('#products-section');
@@ -32,4 +35,20 @@ productCardsForEach.forEach((product, index) => {
     let price = product.querySelector('.price')?.textContent.trim();
     console.log(`Product ${index + 1}: ${name} - ${price}`);
 });
+}
 
+//Inspect-element-properties 
+let element = document.getElementById('products-heading');
+console.log('---see elements properties---');
+console.log('tag name:', element.tagName); // H2
+console.log('id:', element.id);
+console.log('class name:', element.className);
+console.log('class list:', element.classList);
+
+// Explore parent container
+let container = document.querySelector('.container')
+console.log('parent element:', container.parentElement);
+console.log('parent node:', container.parentNode);
+console.log('children:',container.children);
+console.log('firstelementchild:', container.firstElementChild);
+console.log('lastelementchild', container.lastElementChild);
